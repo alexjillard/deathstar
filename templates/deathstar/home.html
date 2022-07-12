@@ -1,0 +1,28 @@
+{% extends 'deathstar/base.html' %}
+{% block body %}
+<div id="content">
+    <div class="pre">
+        <pre hx-get="{%url 'planet' %}" hx-swap="outerHTML" hx-trigger="load"></pre>
+        <pre id="deathstar">
+    .          .
+    .          .                  .          .     
+          +.           _____  .        .        + . 
+      .        .   ,-~"     "~-.                  
+                 ,^ ___         ^. +            
+                / .^   ^.         \         .    
+               Y  l  o  !          Y  .         
+       .       l_ `.___.'        _,[          
+               |^~"-----------""~ ^|       +  
+     +       . !                   !     .   
+            .   \                 /           
+                 ^.             .^            . 
+                   "-.._____.,-" .             
+            +           .                .   + 
+     +          .             +                
+            .             .      .       
+        </pre>
+    </div>
+    {% include 'deathstar/charging.html' %}
+    
+</div>
+{% endblock body %}

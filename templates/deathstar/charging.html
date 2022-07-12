@@ -1,0 +1,12 @@
+<div id="controls" 
+    hx-get="{% url 'charge' %}"
+    hx-trigger="load delay:1s"
+    hx-swap="outerHTML"
+>
+    <h3>Charging...</h3>
+    <pre id="charging">[{{ segments }}{{ partial }}{{spaces}}] {{ charge.percent|floatformat:2 }}%</pre>
+    <button 
+        hx-post="{% url 'fire' %}"
+        hx-target="#planet"
+    >pew pew</button>
+</div>
